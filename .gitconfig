@@ -1,0 +1,20 @@
+[user]
+	name = gongym
+	email = 1967988842@qq.com
+	
+[http "https://github.com"]
+    proxy = http://127.0.0.1:9910
+		
+[http "https://chromium.googlesource.com"]
+    proxy = http://127.0.0.1:9910
+	
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	autocrlf = true
+	longpaths = true
+[credential "helperselector"]
+	selected = wincred
